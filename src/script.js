@@ -1,13 +1,11 @@
 /**
  * Extracts only digits from a string and trims whitespace
- * @param {string} txt - Input string to process
+ * @param {string|number} txt - Input string or number to process
  * @returns {string} String containing only digits
  */
 export function trim(txt) {
-    if (typeof txt !== 'string') {
-        return '';
-    }
-    return txt.replace(/[^\d]/g, '').trim();
+    txt = String(txt);
+    return txt.replace(/[^\d]/g, '');
 }
 
 /**

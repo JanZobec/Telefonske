@@ -7,7 +7,8 @@ describe('telefon386', () => {
         expect(trim(' +386 (51) 234-567 ')).toBe('38651234567');
         expect(trim(' (0) 51-234-567 ')).toBe('051234567');
         expect(trim('No digits!')).toBe('');
-        expect(trim(12345)).toBe('');
+        expect(trim(1)).toBe('1');
+        expect(trim(12345)).toBe('12345');
         expect(trim(null)).toBe('');
         expect(trim(undefined)).toBe('');
         expect(trim('')).toBe('');
